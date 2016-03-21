@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lorem Ipsum"
-tags: [Lorem ipsum, example post,careta, hola as]
+tags: [Lorem ipsum, example post]
 sitemap:
  lastmod: 2016-02-13
 ---
