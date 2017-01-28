@@ -33,7 +33,7 @@
 {% else %}
   {% assign keywords = site.keywords  %}
 {% endif %}
-  
+
 
     <!-- Generic metas -->
     <meta charset="utf-8" />
@@ -44,7 +44,9 @@
     <link rel="canonical" href="{{ url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ base_url }}/feed.xml">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ base_url }}/sitemap.xml" />
-    
+    {% if page.amplink %}
+    <link rel="amphtml" href="{{ base_url }}{{ page.amplink }}" />
+    {% endif %}
     <!-- OpenGraph -->
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page_description }}" />
@@ -58,7 +60,7 @@
     {% if site.facebook_adminid %}
     <meta property="fb:admins" content="{{ site.facebook_adminid }}">
     {% endif %}
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page_description }}" />
@@ -75,7 +77,3 @@
     {% if site.bing_verification %}
     <meta name="msvalidate.01" content="{{ site.bing_verification }}" />
     {% endif %}
-    
-    
-    
-    
