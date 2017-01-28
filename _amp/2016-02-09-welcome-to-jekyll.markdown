@@ -1,26 +1,34 @@
 ---
 layout: amp
-title: acuario hoy gratis 28 de enero del 2017
-permalink: /horoscopo-diario-gratis/amp/acuario/
-normallink: /horoscopo-diario-gratis/acuario/
+title: "Welcome to Jekyll!"
+permalink: /amp/welcome-to-jekyll/
+normallink: /welcome-to-jekyll/
 home: FALSE
-horoscopo:
- signo: acuario
- video: tqIwpTCSUEU
 
-ogimg: /images/acuario_char.png
+ogimg: /img/jekyll-start.png
 sitemap:
  priority: 1
  changefreq: 'daily'
 ---
 
 
-Hoy podrías encontrarte actuando de mediador. El aspecto en juego te está dando una mayor percepción de las situaciones problemáticas que te rodean. Quizás los integrantes de tu familia estén peleando por algo. Podrías decir las palabras exactas que ayudarán a que todos hagan las paces. O en el trabajo podrías ayudar a mediar en un problema entre dos de tus compañeros. No temas dar un paso al frente para expresar tus propias ideas.
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-##Amor
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-El día de hoy sin duda te dará una indicación en cuanto a cuál es la opinión actual de tu ser querido sobre ti. Usa esta energía como herramienta de aprendizaje para devolverte la pasión. La alineación de las estrellas provocará energía obstinada a tu alrededor. Úsala a tu favor para defender tu postura en esta relación.
+Jekyll also offers powerful support for code snippets:
 
-##Trabajo
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
 
-Toma el control de esa situación que parece no prosperar de ningún modo. Puede que notes que en tu trabajo reina el estancamiento (gracias a la incapacidad de alguien para tomar decisiones con respecto a un asunto en particular). Este es el momento para que des un paso al frente y muestres tu poderío.
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+d

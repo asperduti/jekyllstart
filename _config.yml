@@ -47,11 +47,10 @@ socialmedia:
   googleplus: jekyllstart
   instagram: jekyllstart
   youtube: jekyllstart
-  
+
 
 # Build settings
 markdown: kramdown
 
 #
-include:
- - _pages
+include: ['_pages', '_amp']
