@@ -1,0 +1,16 @@
+{% assign base_url = site.baseurl | prepend: site.url %}
+
+
+   <!--[if lt IE 9]>
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   {% if site.favicon %}
+   <link rel="icon" type="image/png" href="{{ site.url }}/{{ site.favicon }}" />
+   {% endif %}
+   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.url }}/feed.xml" />
+   <style>
+   {% capture include_to_scssify %}
+    {% include jekyllstart/style.scss %}
+   {% endcapture %}
+   {{ include_to_scssify | scssify }}
+   </style>

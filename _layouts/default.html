@@ -1,23 +1,39 @@
 ---
-layout: compress
 ---
-  {% include head.html %}
-  <body>
-  <!-- Contenedor Main y sidebar --> 
-    <div id="main" role="main" class="container">
+   {% include jekyllstart/head.html %}
+   <body>
+   <!-- Contenedor Main y sidebar -->
 
-      {% include navbar.html %}
+            <!-- Page Content -->
+      <div class="container">
 
-      <div class="row">
-	  {{ content }}
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+               <h1 class="my-4">{{ site.name}}
+                  <small>{{ site.title}}</small>
+               </h1>
+
+               {{ content }}
+
+               <!-- Pagination -->
+               <ul class="pagination justify-content-center mb-4">
+                  <li class="page-item">
+                    <a class="page-link" href="#">&larr; Older</a>
+                  </li>
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#">Newer &rarr;</a>
+                  </li>
+               </ul>
+
+            </div>
+            {% include sidebar.html %}
+         </div>
+         <!-- /.row -->
       </div>
-      
-      
-      
-    </div>
+      {% include footer.html %}
 
-    {% include footer.html %}
-    
-    {% include resources.html %}
-  </body>
+      {% include jekyllstart/resources.html %}
+   </body>
 </html>

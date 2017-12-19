@@ -8,20 +8,41 @@
 # Site settings
 title: Your awesome title
 name: Jekyll Start
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
 description: > # this means to ignore newlines until "keywords:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 keywords: jekyll, bootstrap, blogging, github pages, jekyll and bootstrap, seo, font awesome
-favicon: img/favicon.png
-image: img/jekyll-start.png
+favicon: /assets/img/favicon.png
+image: /assets/img/jekyll-start.png
 permalink: /:title
+lang: es
+
+
+# Default author
+author:
+   name: Ariel Sperduti
+   email: ariel@sperduti.com.ar
+   facebook: arielsperduti
+   github: asperduti
+   twitter: asperduti
+   reddit: ''
+   googleplus: ''
+   linkedin: asperduti
+   stackoverflow: ''
+   instagram: arielsperduti
+   youtube: ''
+
 
 
 #Adsense code
 adsense:
+   client: ''
+   slot: ''
+   format: 'auto'
+
 
 #Site Stats
 google_analytics:
@@ -32,13 +53,13 @@ searchconsole_verification:
 #Bing Webmaster tools Verification
 bing_verification:
 
-
 #Comments
 disqus:
+facebook_comments:
 
 #Facebook
-#App ID
-facebook_app:
+facebook_appid:
+facebook_appversion: 'v2.11'
 facebook_adminid:
 
 socialmedia:
@@ -48,9 +69,27 @@ socialmedia:
   instagram: jekyllstart
   youtube: jekyllstart
 
+# Don't need to change
+
+# Plugins
+plugins: [jekyll-paginate]
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+paginate: 5
 
-#
-include: ['_pages', '_amp']
+# Sass
+sass:
+  sass_dir: assets/_sass
+  style: :compressed
+
+include: ['_pages']
+
+# Exclude these files from production site
+exclude:
+   - README.md
+   - LICENSE
+   - assets/_sass
+   - assets/_js
+   - .gitignore
