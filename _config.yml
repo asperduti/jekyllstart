@@ -84,7 +84,7 @@ sass:
   sass_dir: assets/_sass
   style: :compressed
 
-include: ['_pages']
+include: ['_pages', '_amp']
 
 # Exclude these files from production site
 exclude:

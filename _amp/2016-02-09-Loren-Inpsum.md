@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: amp
 title:  "Lorem Ipsum"
 tags: [Lorem ipsum, example post,careta, hola as]
-permalink: /Lorem-Ipsum
-ampversion: yes
+permalink: /amp/Lorem-Ipsum
+canonical: /Lorem-Ipsum
 sitemap:
  lastmod: 2016-02-13
 ---

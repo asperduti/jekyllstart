@@ -35,45 +35,53 @@
 {% endif %}
 
 
-    <!-- Generic metas -->
-    <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="{{ page_description }}" />
-    <link rel="canonical" href="{{ url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ base_url }}/feed.xml">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ base_url }}/sitemap.xml" />
-    {% if page.amplink %}
-    <link rel="amphtml" href="{{ base_url }}{{ page.amplink }}" />
-    {% endif %}
-    <!-- OpenGraph -->
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:description" content="{{ page_description }}" />
-    <meta property="og:image" content="{{ img }}" />
-    <meta property="og:site_name" content="{{ site.name }}" />
-    <meta property="og:url" content="{{ url }}" />
-    <meta property="og:type" content="article" />
-    {% if site.facebook_app %}
-    <meta property="fb:app_id" content="{{ site.facebook_app }}" />
-    {% endif %}
-    {% if site.facebook_adminid %}
-    <meta property="fb:admins" content="{{ site.facebook_adminid }}">
-    {% endif %}
+   <!-- Generic metas -->
+   <meta charset="utf-8" />
+   <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="{{ page_description }}" />
+   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ base_url }}/feed.xml">
+   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ base_url }}/sitemap.xml" />
+   {% if site.favicon %}
+   <link rel="icon" type="image/png" href="{{ site.url }}/{{ site.favicon }}" />
+   {% endif %}
+   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.url }}/feed.xml" />
+   {% if page.ampversion %}
+   <link rel="amphtml" href="{{ site.url }}/amp{{ page.url }}" />
+   {% endif %}
+   {% if page.canonical %}
+   <link rel="canonical" href="{{ site.url }}{{ page.canonical }}/" />
+   {% else %}
+   <link rel="canonical" href="{{ site.url }}{{ page.url }}/" />
+   {% endif %}
+   <!-- OpenGraph -->
+   <meta property="og:title" content="{{ page.title }}" />
+   <meta property="og:description" content="{{ page_description }}" />
+   <meta property="og:image" content="{{ img }}" />
+   <meta property="og:site_name" content="{{ site.name }}" />
+   <meta property="og:url" content="{{ url }}" />
+   <meta property="og:type" content="article" />
+   {% if site.facebook_app %}
+   <meta property="fb:app_id" content="{{ site.facebook_app }}" />
+   {% endif %}
+   {% if site.facebook_adminid %}
+   <meta property="fb:admins" content="{{ site.facebook_adminid }}">
+   {% endif %}
 
-    <!-- Twitter Card -->
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="{{ page_description }}" />
-    <meta name="twitter:card" content="summary" />
-    {% if site.socialmedia.twitter %}
-    <meta name="twitter:site" content="@{{ site.socialmedia.twitter }}" />
-    {% endif %}
-    <meta name="twitter:image" content="{{ img }}" />
+   <!-- Twitter Card -->
+   <meta name="twitter:title" content="{{ page.title }}" />
+   <meta name="twitter:description" content="{{ page_description }}" />
+   <meta name="twitter:card" content="summary" />
+   {% if site.socialmedia.twitter %}
+   <meta name="twitter:site" content="@{{ site.socialmedia.twitter }}" />
+   {% endif %}
+   <meta name="twitter:image" content="{{ img }}" />
 
-    <meta name="keywords" content="{{ keywords }}" />
-    {% if site.searchconsole_verification %}
-    <meta name="google-site-verification" content="{{ site.searchconsole_verification }}" />
-    {% endif %}
-    {% if site.bing_verification %}
-    <meta name="msvalidate.01" content="{{ site.bing_verification }}" />
-    {% endif %}
+   <meta name="keywords" content="{{ keywords }}" />
+   {% if site.searchconsole_verification %}
+   <meta name="google-site-verification" content="{{ site.searchconsole_verification }}" />
+   {% endif %}
+   {% if site.bing_verification %}
+   <meta name="msvalidate.01" content="{{ site.bing_verification }}" />
+   {% endif %}
