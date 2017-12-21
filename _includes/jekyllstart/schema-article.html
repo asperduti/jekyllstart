@@ -46,38 +46,38 @@
 {% assign page_dateModified = page_dateModified | date: "%Y-%m-%d"  %}
 
 
-   <script type="application/ld+json">
-      {
+<script type="application/ld+json">
+   {
       "@context": "http://schema.org",
       "@type": "Article",
       "mainEntityOfPage":{
-	"@type":"WebPage",
-	"@id":"{{ url }}"
+         "@type":"WebPage",
+         "@id":"{{ url }}"
       },
       "headline": "{{ page.title }}",
       "image": {
-	"@type": "ImageObject",
-	"url": "{{ img }}",
-	"height": 1024,
-	"width": 768
+         "@type": "ImageObject",
+         "url": "{{ img }}",
+         "height": 1024,
+         "width": 768
       },
       "datePublished": "{{ page_datePublished }}",
       "dateModified": "{{ page_dateModified }}",
-      
+
       "author": {
-	"@type": "Person",
-	"name": "{{ site.name }}"
+         "@type": "Person",
+         "name": "{{ site.name }}"
       },
       "publisher": {
-	"@type": "Organization",
-	"name": "{{ site.name }}",
-	"logo": {
-	  "@type": "ImageObject",
-	  "url": "{{ site.url }}{{ site.avatar }}",
-	  "width": 600,
-	  "height": 60
-	}
+         "@type": "Organization",
+         "name": "{{ site.name }}",
+         "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}{{ site.avatar }}",
+            "width": 600,
+            "height": 60
+         }
       },
       "description": "{{ page_description }}"
-    }
-   </script> 
+   }
+</script>

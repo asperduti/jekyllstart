@@ -1,21 +1,32 @@
 ---
 ---
-{% include jekyllstart/amphead.html %}
+{% capture datetime %}
+   {% if page.sitemap.lastmod %}
+      {{ page.sitemap.lastmod | date: "%d-%m-%Y" }}
+   {% elsif page.date %}
+      {{ page.date | date: "%d-%m-%Y" }}
+   {% else %}
+      {{ site.time | date: "%d-%m-%Y" }}
+   {% endif %}
+{% endcapture %}
 
+{% include jekyllstart/amphead.html %}
 <body>
+   {% include jekyllstart/schema-article.html %}
+   {% include ampnavbar.html %}
+   {% include ampsidebar.html %}
    <main id="content" role="main" class="">
       <article class="recipe-article">
         <header>
-           <span class="ampstart-subtitle block px3 pt2 mb2">FOOD</span>
            <h1 class="mb1 px3">{{ page.title }}</h1>
-
             <!-- Start byline -->
             <address class="ampstart-byline clearfix mb4 px3 h5">
-               <time class="ampstart-byline-pubdate block bold my1" datetime="2016-12-13">December 13, 2016</time>
+               <time class="ampstart-byline-pubdate block bold my1" datetime="{{ datetime}}">{{ datetime}}</time>
             </address>
             <!-- End byline -->
-            <amp-img src="../img/blog/spritzer.jpg" width="1280" height="853" layout="responsive" alt="The final spritzer" class="mb4 mx3"></amp-img>
-
+            {% if page.image %}
+            <amp-img src="{{ site.baseurl }}{{ page.img }}" width="750" height="300" layout="responsive" alt="{{ page.title}}" class="mb4 mx3"></amp-img>
+            {% endif %}
         </header>
 
          {{ content }}

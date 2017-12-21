@@ -23,9 +23,11 @@ lang: es
 
 # Default author
 author:
+   nickname: asperduti
    name: Ariel Sperduti
    email: ariel@sperduti.com.ar
    facebook: arielsperduti
+   website: https://ariel.sperduti.com.ar
    github: asperduti
    twitter: asperduti
    reddit: ''
